@@ -11,12 +11,12 @@ h1{
     overflow: hidden;
 }
 #blocklyDiv{
-    width:92%;
-    height: 465px;
+    width:100%;
+    height: 600px;
 }
 #blocklyDiv_function{
-    width:92%;
-    height: 430px;
+    width:100%;
+    height: 900px;
 }
 #code_area{ /*#othello_area*/ 
     float: right;
@@ -42,12 +42,12 @@ h1{
     padding:10px;
 }
 .hat_area{  /*Hat出力エリア*/
-    display: none;
+    /*display: none;*/
     height: 400px; 
     padding:10px;
 }
 .hat_output_area{
-    display: none;
+    /*display: none;*/
     height: 200px; 
     padding:10px;
 }
