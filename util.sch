@@ -325,6 +325,19 @@ $listの先頭に$elを追加したリストを返す。
 (defineCPS nil ^(R . return)
   return true)
 
+#|
+ラムダ計算のための補助関数
+無名関数を評価した際に即座に継続に適用させず、関数オブジェクトそのものとして扱うためのラッパー
+|#
+(defineCPS LAMBDA ^(val)
+  JavaScript "(function(v){ return v; })" val)
+
+#|
+関数適用のための補助関数
+|#
+(defineCPS APPLY ^(f arg)
+  f arg)
+
 #|2023.12.21追加
 (defineCPS turnSelect ^ return
   JavaScript "waitTurnSelect" return ^(dummy)
